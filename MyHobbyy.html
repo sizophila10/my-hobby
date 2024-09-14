@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tennis My Hobby</title>
+
+    <style>
+      body {
+        background: linear-gradient(to right, purple, blue);
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid pink;
+        background-color: white;
+        font-size: 25px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: orangered;
+        cursor: pointer;
+      }
+      .container {
+        margin: 20px auto;
+        max-width: 600px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 20px;
+      }
+      .theme {
+        font-size: 10px;
+        background: black;
+        color: white;
+        padding: 5px 8px;
+      }
+      .theme:hover {
+        background: white;
+        color: black;
+      }
+      .tennis-pic {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .tennis-pic:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .grid img:hover {
+        transform: scale(1.5);
+      }
+      .dark {
+        background: linear-gradient(
+          112.1deg,
+          rgb(38, 32, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        color: white;
+      }
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark a {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme">Dark Theme</button>
+    <div class="container">
+      <h1>Tennis</h1>
+      <h2>My favourite sport</h2>
+      <a href="https://en.wikipedia.org/wiki/Tennis" target="_blank">
+        <img
+          src="https://www.tenniscourtsupply.com/cdn-cgi/image/quality%3D85/assets/images/December%202022%20-%20Tennis%20Court%20Supply.png"
+          class="tennis-pic"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaMfQwmFIm7YY8Kt6GFXr_Ufg750tbU0rLFw&s"
+          alt=""
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBUO3TaDxlrZiY0wsibjIdlmn_oXjdNSon6Q&s"
+          alt=""
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfeQlGMOBQXeq9lVuD-IJXR-EnrOzAocFPwQ&s"
+          alt=""
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTafNjcY_RK9YY_eQ_PCQ1rRK5nkcNPJOqeVQ&s"
+          alt=""
+        />
+      </div>
+      <p>
+        Tennis is a racket sport that is played either individually against a
+        single opponent (singles) or between two teams of two players each
+        (doubles). Players use racquets to hit a ball over a net into the other
+        side of the court. A game of tennis involves a variety of types of play,
+        including serving the ball over the net, rallies (when the ball is hit
+        back and forth between opponents), fast movements and strategic game
+        play.
+      </p>
+      <button class="book">Click here to book a session</button>
+    </div>
+    <footer>Coded by Sizophila Ngcobo</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        body.classList.toggle("dark");
+        /*if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }*/
+      }
+      let themeButton = document.querySelector("button");
+      themeButton.addEventListener("click", changeTheme);
+
+      function bookUs() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your contact?");
+        let level = prompt("Are you a beginer or expert?");
+        alert(
+          "Thank you" +
+            name +
+            ",we will be in touch soon! Enjoy the rest of your day."
+        );
+      }
+      let bookButton = document.querySelector(".book");
+      bookButton.addEventListener("click", bookUs);
+    </script>
+  </body>
+</html>
